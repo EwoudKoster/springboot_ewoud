@@ -21,11 +21,15 @@ VALUES
 
 INSERT INTO stock (item_name, price_in_euro, storage_location, phone_number)
 VALUES
-('aandrijfas', '50', 'Apeldoorn', '0639004321'),
-('test', 'test', 'test', 'test'),
-('test', 'test', 'test', 'test'),
-('test', 'test', 'test', 'test'),
-('test', 'test', 'test', 'test'),
-('test', 'test', 'test', 'test');
+('Algemeen', '€45', 'Apeldoorn', '0639004321'),
+('banden', '€180', 'Apeldoorn', '0639004321'),
+('Remmen', '€400', 'Apeldoorn', '0639004321'),
+('Ruitenwissers & ruitensproeier', '€30', 'Apeldoorn', '0639004321'),
+('Verlichting', '€40', 'Apeldoorn', '0639004321'),
+('Uitlaat', '€80', 'Apeldoorn', '0639004321'),
+('Vergrendeling & gordels', '€350', 'Apeldoorn', '0639004321'),
+('Carrosserie & claxon', '€1400', 'Apeldoorn', '0639004321'),
+('Spiegels & voorruit', '€250', 'Apeldoorn', '0639004321');
+
 
 
