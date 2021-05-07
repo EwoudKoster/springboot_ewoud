@@ -46,7 +46,8 @@ public class Stock {
 
     public String getItemName() { return itemName; }
 
-    public void setItem_name(String itemName) { this.itemName = itemName;}
+    public void setItem_name(String itemName) {
+        this.itemName = itemName;}
 
     public String getPrice_in_euro() {
         return price_in_euro;

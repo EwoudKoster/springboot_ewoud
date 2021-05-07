@@ -5,7 +5,7 @@ import java.util.List;
 
 public interface employeeService {
 
-    List<Employee> getCursussenByName(String name);
-    Employee getCursusById(long id);
+    List<Employee> getEmployeesByName(String name);
+    Employee getEmployeeById(long id);
 
 }

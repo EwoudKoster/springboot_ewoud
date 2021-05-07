@@ -15,7 +15,7 @@ public class employeeServiceImpl implements employeeService {
     employeeRepository employeeRepository;
 
     @Override
-    public List<Employee> getCursussenByName(String name) {
+    public List<Employee> getEmployeesByName(String name) {
         if (name == null || name.isEmpty())
             return employeeRepository.findAll();
         else
@@ -23,7 +23,7 @@ public class employeeServiceImpl implements employeeService {
     }
 
     @Override
-    public Employee getCursusById(long id) {
+    public Employee getEmployeeById(long id) {
         if (employeeRepository.existsById(id)) {
             return employeeRepository.findById(id).get();
         }

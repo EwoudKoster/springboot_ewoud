@@ -15,12 +15,12 @@ public class employeeController {
 
     @GetMapping(value = "/emplyee")
     public ResponseEntity<Object> getEmployee(@RequestParam(required = false) String name) {
-        return new ResponseEntity<>(employeeService.getCursussenByName(name), HttpStatus.OK);
+        return new ResponseEntity<>(employeeService.getEmployeesByName(name), HttpStatus.OK);
     }
 
     @GetMapping(value = "/employee/{id}")
     public ResponseEntity<Object> getEmployee(@PathVariable("id") Long id) {
-        return new ResponseEntity<>(employeeService.getCursusById(id), HttpStatus.OK);
+        return new ResponseEntity<>(employeeService.getEmployeeById(id), HttpStatus.OK);
     }
 
 }

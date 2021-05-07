@@ -1,12 +1,13 @@
 package nl.novi.springboot.first_demo.model;
 
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
-import javax.persistence.*;
-import java.util.List;
+import org.springframework.web.bind.annotation.RequestMapping;
 
+import javax.persistence.*;
 
 @Entity
 @Table(name = "customers")
+@RequestMapping(value = "/v1")
 public class Customer {
 
     @Id
@@ -24,6 +25,8 @@ public class Customer {
 
     @Column(length = 20)
     private String telefoonnummer;
+
+
 
     @JsonIgnoreProperties("customer")
 
