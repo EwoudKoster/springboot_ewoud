@@ -32,4 +32,34 @@ public class employeeServiceImpl implements employeeService {
         }
     }
 
+    @Override
+    public long addEmployee(Employee employee) {
+        Employee newEmployee = employeeRepository.save(employee);
+        return newEmployee.getId();
+    }
+
+    @Override
+    public void deleteEmployee(long id) {
+        if (employeeRepository.existsById(id)) {
+            employeeRepository.deleteById(id);
+        }
+        else {
+            throw new RecordNotFoundException();
+        }
+    }
+
+    @Override
+    public void updateEmployee(long id, Employee employee) {
+        if (employeeRepository.existsById(id)) {
+            Employee existingEmployee = employeeRepository.findById(id).get();
+            existingEmployee.setId(employee.getId());
+            existingEmployee.setJob(employee.getJob());
+            existingEmployee.setNaam(employee.getNaam());
+            employeeRepository.save(existingEmployee);
+        }
+        else {
+            throw new RecordNotFoundException();
+        }
+    }
+
 }

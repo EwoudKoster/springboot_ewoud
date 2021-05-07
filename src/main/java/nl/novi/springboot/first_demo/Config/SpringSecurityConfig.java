@@ -62,6 +62,17 @@ public class SpringSecurityConfig extends WebSecurityConfigurerAdapter {
                 .antMatchers(HttpMethod.GET, "/v1/customers/3").hasRole("CUSTOMER_3")
                 .antMatchers(HttpMethod.GET, "/v1/customers/4").hasRole("CUSTOMER_4")
 
+                // de backoffice medewerker die de stock moet bijhouden
+                .antMatchers(HttpMethod.GET, "/v1/stock/**").hasRole("BACKOFFICE")
+                .antMatchers(HttpMethod.POST, "/v1/stock/**").hasRole("BACKOFFICE")
+                .antMatchers(HttpMethod.PUT, "/v1/stock/**").hasRole("BACKOFFICE")
+                .antMatchers(HttpMethod.DELETE, "/v1/stock/**").hasRole("BACKOFFICE")
+                .antMatchers(HttpMethod.PATCH, "/v1/stock/**").hasRole("BACKOFFICE")
+
+                // de mechanic medewerker
+
+                // de administrator medewerker
+
                 .antMatchers("/v1/users/**").hasRole("ADMIN")
                 .antMatchers("/v1/emplyee/**").hasRole("USER")
                 .antMatchers("/v1/customers/**").hasRole("USER")
