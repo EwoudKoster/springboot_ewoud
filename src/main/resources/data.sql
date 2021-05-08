@@ -50,10 +50,13 @@ VALUES
 ('Carrosserie & claxon', '€1400', 'Apeldoorn', '0639004321'),
 ('Spiegels & voorruit', '€250', 'Apeldoorn', '0639004321');
 
-INSERT INTO repair (item_name, price_in_euro)
+INSERT INTO repair (item_name, price_in_euro, handeling)
 VALUES
-('test', 'test'),
-('test', 'test');
+('APK-keuring', '€45', 'algemene kosten voor de APK-Keuring'),
+('Remmen', '€400', 'remmen vervangen omdat ze versleten zijn'),
+('banden', '€180', 'banden vervangen voor zomerbanden'),
+('gordels', '€350', 'gordel links voor vervangen omdat die kapot is'),
+('voorruit', '€250', 'sterretje in de voorruit maken');
 
 
 
