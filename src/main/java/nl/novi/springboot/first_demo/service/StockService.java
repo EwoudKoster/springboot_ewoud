@@ -1,6 +1,5 @@
 package nl.novi.springboot.first_demo.service;
 
-import nl.novi.springboot.first_demo.model.Customer;
 import nl.novi.springboot.first_demo.model.Stock;
 
 import java.util.List;

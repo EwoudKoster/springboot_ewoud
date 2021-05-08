@@ -50,5 +50,11 @@ VALUES
 ('Carrosserie & claxon', '€1400', 'Apeldoorn', '0639004321'),
 ('Spiegels & voorruit', '€250', 'Apeldoorn', '0639004321');
 
+INSERT INTO repair (item_name, price_in_euro)
+VALUES
+('test', 'test'),
+('test', 'test');
+
+
 
 

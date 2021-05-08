@@ -14,12 +14,6 @@ public class StockServiceImpl implements StockService {
     @Autowired
     StockRepository stockRepository;
 
-    /*
-    @Override
-    public List<Stock> getAllCustomer() {
-        return StockRepository.findAll();
-    }
-     */
 
     @Override
     public List<Stock> getStockByName(String name) {

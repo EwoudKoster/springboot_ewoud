@@ -23,7 +23,6 @@ public class Employee {
     @JsonIgnoreProperties("customer")
 
     // Getters and setters
-
     public long getId() {
         return id;
     }
@@ -38,14 +37,6 @@ public class Employee {
 
     public void setNaam(String naam) {
         this.naam = naam;
-    }
-
-    public String getDocent() {
-        return emplyee_number;
-    }
-
-    public void setDocent(String docent) {
-        this.emplyee_number = docent;
     }
 
     public String getJob() {
