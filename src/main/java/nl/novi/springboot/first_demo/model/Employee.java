@@ -46,4 +46,12 @@ public class Employee {
     public void setJob(String job) {
         this.job = job;
     }
+
+    public String getEmplyee_number() {
+        return emplyee_number;
+    }
+
+    public void setEmplyee_number(String emplyee_number) {
+        this.emplyee_number = emplyee_number;
+    }
 }

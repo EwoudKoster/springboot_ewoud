@@ -7,7 +7,6 @@ import java.util.List;
 
 public interface CustomerRepository extends JpaRepository<Customer, Long> {
 
-    List<Customer> findByAchternaamIs(String name);
     List<Customer> findByAchternaamStartingWithOrderByAchternaam(String name);
 
 }

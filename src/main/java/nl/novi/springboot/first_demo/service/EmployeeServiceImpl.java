@@ -2,17 +2,17 @@ package nl.novi.springboot.first_demo.service;
 
 import nl.novi.springboot.first_demo.exception.RecordNotFoundException;
 import nl.novi.springboot.first_demo.model.Employee;
-import nl.novi.springboot.first_demo.repository.employeeRepository;
+import nl.novi.springboot.first_demo.repository.EmployeeRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
 
 @Service
-public class employeeServiceImpl implements employeeService {
+public class EmployeeServiceImpl implements EmployeeService {
 
     @Autowired
-    employeeRepository employeeRepository;
+    EmployeeRepository employeeRepository;
 
     @Override
     public List<Employee> getEmployeesByName(String name) {
@@ -55,6 +55,7 @@ public class employeeServiceImpl implements employeeService {
             existingEmployee.setId(employee.getId());
             existingEmployee.setJob(employee.getJob());
             existingEmployee.setNaam(employee.getNaam());
+            existingEmployee.setEmplyee_number(employee.getEmplyee_number());
             employeeRepository.save(existingEmployee);
         }
         else {

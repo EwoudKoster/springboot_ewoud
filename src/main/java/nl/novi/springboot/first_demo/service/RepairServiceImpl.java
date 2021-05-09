@@ -55,6 +55,7 @@ public class RepairServiceImpl implements RepairService {
             existingRepair.setItem_name(repair.getItemName());
             existingRepair.setPrice_in_euro(repair.getPrice_in_euro());
             existingRepair.setHandeling(repair.getHandeling());
+            existingRepair.setHandeling(repair.getHandeling());
             repairRepository.save(existingRepair);
 
         }

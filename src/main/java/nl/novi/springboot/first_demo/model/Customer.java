@@ -26,8 +26,6 @@ public class Customer {
     @Column(length = 20)
     private String telefoonnummer;
 
-
-
     @JsonIgnoreProperties("customer")
 
     // constructors

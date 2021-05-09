@@ -19,16 +19,20 @@ public class Repair {
     @Column(length = 80)
     private String handeling;
 
+    @Column(length = 80)
+    private String status;
+
 
     // constructors
     public Repair() {
     }
 
-    public Repair(long stock_id, String itemName, String Price, String handeling) {
+    public Repair(long stock_id, String itemName, String Price, String handeling, String status) {
         this.id = stock_id;
         this.itemName = itemName;
         this.price_in_euro = Price;
         this.handeling = handeling;
+        this.status = status;
 
     }
 
@@ -56,9 +60,7 @@ public class Repair {
         this.price_in_euro = Price;
     }
 
-    public void setItemName(String itemName) {
-        this.itemName = itemName;
-    }
+    public void setItemName(String itemName) { this.itemName = itemName; }
 
     public String getHandeling() {
         return handeling;
@@ -66,5 +68,11 @@ public class Repair {
 
     public void setHandeling(String handeling) {
         this.handeling = handeling;
+    }
+
+    public String getStatus() { return status; }
+
+    public void setStatus(String status) {
+        this.status = status;
     }
 }

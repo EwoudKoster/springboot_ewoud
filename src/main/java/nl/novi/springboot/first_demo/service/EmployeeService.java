@@ -4,7 +4,7 @@ import nl.novi.springboot.first_demo.model.Customer;
 import nl.novi.springboot.first_demo.model.Employee;
 import java.util.List;
 
-public interface employeeService {
+public interface EmployeeService {
 
     List<Employee> getEmployeesByName(String name);
     Employee getEmployeeById(long id);
