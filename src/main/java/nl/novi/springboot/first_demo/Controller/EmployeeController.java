@@ -17,7 +17,7 @@ public class EmployeeController {
     @Autowired
     EmployeeService employeeService;
 
-    @GetMapping(value = "/emplyee")
+    @GetMapping(value = "/employee")
     public ResponseEntity<Object> getEmployee(@RequestParam(required = false) String name) {
         return new ResponseEntity<>(employeeService.getEmployeesByName(name), HttpStatus.OK);
     }

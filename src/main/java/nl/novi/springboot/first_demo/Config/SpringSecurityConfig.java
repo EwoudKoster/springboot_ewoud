@@ -74,11 +74,11 @@ public class SpringSecurityConfig extends WebSecurityConfigurerAdapter {
                 .antMatchers(HttpMethod.DELETE, "/v1/repair/**").hasRole("ADMIN")
                 .antMatchers(HttpMethod.PATCH, "/v1/repair/**").hasRole("ADMIN")
 
-                .antMatchers(HttpMethod.GET, "/v1/emplyee/**").hasRole("ADMIN")
-                .antMatchers(HttpMethod.POST, "/v1/emplyee/**").hasRole("ADMIN")
-                .antMatchers(HttpMethod.PUT, "/v1/emplyee/**").hasRole("ADMIN")
-                .antMatchers(HttpMethod.DELETE, "/v1/emplyee/**").hasRole("ADMIN")
-                .antMatchers(HttpMethod.PATCH, "/v1/emplyee/**").hasRole("ADMIN")
+                .antMatchers(HttpMethod.GET, "/v1/employee/**").hasRole("ADMIN")
+                .antMatchers(HttpMethod.POST, "/v1/employee/**").hasRole("ADMIN")
+                .antMatchers(HttpMethod.PUT, "/v1/employee/**").hasRole("ADMIN")
+                .antMatchers(HttpMethod.DELETE, "/v1/employee/**").hasRole("ADMIN")
+                .antMatchers(HttpMethod.PATCH, "/v1/employee/**").hasRole("ADMIN")
 
                 // customers kunnen alleen een get vragen op hun eigen informatie
                 .antMatchers(HttpMethod.GET, "/v1/customers/1").hasRole("CUSTOMER_1")
@@ -98,18 +98,21 @@ public class SpringSecurityConfig extends WebSecurityConfigurerAdapter {
                 .antMatchers(HttpMethod.DELETE, "/v1/stock/**").hasRole("BACKOFFICE")
                 .antMatchers(HttpMethod.PATCH, "/v1/stock/**").hasRole("BACKOFFICE")
 
-                // de mechanic (deze heeft al een pre-auth bij repair) / cashier
-                .antMatchers(HttpMethod.GET, "/v1/repair/**").hasRole("CASHIER")
+                // de mechanic
                 .antMatchers(HttpMethod.GET, "/v1/repair/**").hasRole("MECHANIC")
                 .antMatchers(HttpMethod.POST, "/v1/repair/**").hasRole("MECHANIC")
                 .antMatchers(HttpMethod.PUT, "/v1/repair/**").hasRole("MECHANIC")
                 .antMatchers(HttpMethod.DELETE, "/v1/repair/**").hasRole("MECHANIC")
                 .antMatchers(HttpMethod.PATCH, "/v1/repair/**").hasRole("MECHANIC")
 
+                // de cashier
+                .antMatchers(HttpMethod.GET, "/v1/repair/**").hasRole("CASHIER")
+
                 // de administrator
                 .antMatchers(HttpMethod.GET, "/v1/customers/**").hasRole("ADMINISTRATOR")
                 .antMatchers(HttpMethod.POST, "/v1/customers/**").hasRole("ADMINISTRATOR")
                 .antMatchers(HttpMethod.PUT, "/v1/customers/**").hasRole("ADMINISTRATOR")
+                .antMatchers(HttpMethod.PATCH, "/v1/customers/**").hasRole("ADMINISTRATOR")
 
                 .antMatchers("/v1/users/**").hasRole("ADMIN")
                 .antMatchers("/v1/emplyee/**").hasRole("USER")

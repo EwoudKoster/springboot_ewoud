@@ -2,7 +2,7 @@ INSERT INTO users (username, password, enabled) VALUES ('user', '$2a$10$wPHxwfsf
 INSERT INTO users (username, password, enabled) VALUES ('admin', '$2a$10$wPHxwfsfTnOJAdgYcerBt.utdAvC24B/DWfuXfzKBSDHO0etB1ica', TRUE);
 INSERT INTO users (username, password, enabled) VALUES ('ewoud', '$2a$10$wPHxwfsfTnOJAdgYcerBt.utdAvC24B/DWfuXfzKBSDHO0etB1ica', TRUE);
 
-INSERT INTO users (username, password, enabled) VALUES ('mechenic', '$2a$10$wPHxwfsfTnOJAdgYcerBt.utdAvC24B/DWfuXfzKBSDHO0etB1ica', TRUE);
+INSERT INTO users (username, password, enabled) VALUES ('mechanic', '$2a$10$wPHxwfsfTnOJAdgYcerBt.utdAvC24B/DWfuXfzKBSDHO0etB1ica', TRUE);
 INSERT INTO users (username, password, enabled) VALUES ('backoffice', '$2a$10$wPHxwfsfTnOJAdgYcerBt.utdAvC24B/DWfuXfzKBSDHO0etB1ica', TRUE);
 INSERT INTO users (username, password, enabled) VALUES ('administrator', '$2a$10$wPHxwfsfTnOJAdgYcerBt.utdAvC24B/DWfuXfzKBSDHO0etB1ica', TRUE);
 INSERT INTO users (username, password, enabled) VALUES ('cashier', '$2a$10$wPHxwfsfTnOJAdgYcerBt.utdAvC24B/DWfuXfzKBSDHO0etB1ica', TRUE);
@@ -11,18 +11,22 @@ INSERT INTO users (username, password, enabled) VALUES ('customer_2', '$2a$10$wP
 INSERT INTO users (username, password, enabled) VALUES ('customer_3', '$2a$10$wPHxwfsfTnOJAdgYcerBt.utdAvC24B/DWfuXfzKBSDHO0etB1ica', TRUE);
 INSERT INTO users (username, password, enabled) VALUES ('customer_4', '$2a$10$wPHxwfsfTnOJAdgYcerBt.utdAvC24B/DWfuXfzKBSDHO0etB1ica', TRUE);
 
-INSERT INTO authorities (username, authority) VALUES ('admin', 'ROLE_USER');
 INSERT INTO authorities (username, authority) VALUES ('admin', 'ROLE_ADMIN');
 INSERT INTO authorities (username, authority) VALUES ('ewoud', 'ROLE_USER');
-
 INSERT INTO authorities (username, authority) VALUES ('mechanic', 'ROLE_MECHANIC');
+INSERT INTO authorities (username, authority) VALUES ('admin', 'ROLE_MECHANIC');
 INSERT INTO authorities (username, authority) VALUES ('backoffice', 'ROLE_BACKOFFICE');
+INSERT INTO authorities (username, authority) VALUES ('admin', 'ROLE_BACKOFFICE');
 INSERT INTO authorities (username, authority) VALUES ('administrator', 'ROLE_ADMINISTRATOR');
+INSERT INTO authorities (username, authority) VALUES ('admin', 'ROLE_ADMINISTRATOR');
 INSERT INTO authorities (username, authority) VALUES ('cashier', 'ROLE_CASHIER');
+INSERT INTO authorities (username, authority) VALUES ('admin', 'ROLE_CASHIER');
 INSERT INTO authorities (username, authority) VALUES ('customer_1', 'ROLE_CUSTOMER_1');
 INSERT INTO authorities (username, authority) VALUES ('customer_2', 'ROLE_CUSTOMER_2');
 INSERT INTO authorities (username, authority) VALUES ('customer_3', 'ROLE_CUSTOMER_3');
 INSERT INTO authorities (username, authority) VALUES ('customer_4', 'ROLE_CUSTOMER_4');
+
+
 
 INSERT INTO customers (voornaam, achternaam, woonplaats, telefoonnummer)
 VALUES
@@ -31,10 +35,10 @@ VALUES
 
 INSERT INTO emplyees (job, naam, emplyee_number)
 VALUES
-('Mechanic', 'Pietjes', '#1324'),
-('Backoffice', 'Veldhuis', '#9872'),
-('Cashier', 'Koster', '#1769'),
-('Administrator', 'Bel', '#4329');
+('Mechanic', 'P. Pietjes', '#1324'),
+('Backoffice', 'K. Veldhuis', '#9872'),
+('Cashier', 'E. Koster', '#1769'),
+('Administrator', 'B. Bel', '#4329');
 
 INSERT INTO stock (item_name, price_in_euro, storage_location, phone_number)
 VALUES

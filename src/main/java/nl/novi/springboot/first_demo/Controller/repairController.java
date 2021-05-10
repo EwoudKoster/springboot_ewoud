@@ -20,19 +20,16 @@ public class repairController {
     RepairService repairService;
 
     @GetMapping(value = "/repair")
-    @PreAuthorize("MECHANIC")
     public ResponseEntity<Object> getRepair(@RequestParam(required = false) String name) {
         return new ResponseEntity<>(repairService.getRepairByName(name), HttpStatus.OK);
     }
 
     @GetMapping(value = "/repair/{id}")
-    @PreAuthorize("MECHANIC")
     public ResponseEntity<Object> getRepair(@PathVariable("id") Integer id) {
         return  new ResponseEntity<>(repairService.getRepairById(id), HttpStatus.OK);
     }
 
     @PostMapping(value = "/repair")
-    @PreAuthorize("MECHANIC")
     public ResponseEntity<Object> addRepair(@RequestBody Repair repair) {
 
         long newId = repairService.addRepair(repair);
@@ -46,14 +43,12 @@ public class repairController {
     }
 
     @DeleteMapping(value = "/repair/{id}")
-    @PreAuthorize("MECHANIC")
     public ResponseEntity<Object> deleteRepair(@PathVariable("id") Integer id) {
         repairService.deleteRepair(id);
         return new ResponseEntity<>("Record deleted", HttpStatus.NO_CONTENT);
     }
 
     @PutMapping(value = "/repair/{id}")
-    @PreAuthorize("MECHANIC")
     public ResponseEntity<Object> updateRepair(@PathVariable("id") Integer id, @RequestBody Repair repair) {
         repairService.updateRepair(id, repair);
         return new ResponseEntity<>("Record updated", HttpStatus.NO_CONTENT);

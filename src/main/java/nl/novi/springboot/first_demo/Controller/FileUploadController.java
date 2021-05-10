@@ -9,7 +9,7 @@ import java.io.IOException;
 @RestController
 public class FileUploadController {
 
-    private static final String storageLocation = "\\Users\\ewoud\\Documents\\SpringBootMap\\uploaded_files/";
+    private static final String storageLocation = "\\Users\\ewoud\\Documents\\SpringBootMap\\uploaded_files";
 
     @RequestMapping(value = "/file-upload", method = RequestMethod.POST)
     @ResponseBody

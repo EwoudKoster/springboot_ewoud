@@ -19,19 +19,16 @@ public class stockController {
     StockService stockService;
 
     @GetMapping(value = "/stock")
-    @PreAuthorize("BACKOFFICE")
     public ResponseEntity<Object> getStock(@RequestParam(required = false) String name) {
         return new ResponseEntity<>(stockService.getStockByName(name), HttpStatus.OK);
     }
 
     @GetMapping(value = "/stock/{id}")
-    @PreAuthorize("BACKOFFICE")
     public ResponseEntity<Object> getStock(@PathVariable("id") Integer id) {
         return  new ResponseEntity<>(stockService.getStockById(id), HttpStatus.OK);
     }
 
     @PostMapping(value = "/stock")
-    @PreAuthorize("BACKOFFICE")
     public ResponseEntity<Object> addStock(@RequestBody Stock stock) {
 
         long newId = stockService.addStock(stock);
@@ -45,14 +42,12 @@ public class stockController {
     }
 
     @DeleteMapping(value = "/stock/{id}")
-    @PreAuthorize("BACKOFFICE")
     public ResponseEntity<Object> deleteStock(@PathVariable("id") Integer id) {
         stockService.deleteStock(id);
         return new ResponseEntity<>("Record deleted", HttpStatus.NO_CONTENT);
     }
 
     @PutMapping(value = "/stock/{id}")
-    @PreAuthorize("BACKOFFICE")
     public ResponseEntity<Object> updateStudent(@PathVariable("id") Integer id, @RequestBody Stock stock) {
         stockService.updateStock(id, stock);
         return new ResponseEntity<>("Record updated", HttpStatus.NO_CONTENT);
